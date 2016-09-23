@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="todoCtrl">
+
+<h2>My Todo List</h2>
+
+<form ng-submit="todoAdd()">
+    <input type="text" ng-model="todoInput" size="50" placeholder="Person">
+    <input type="text" ng-model="todoInput2" size="50" placeholder="Father">
+    <input type="text" ng-model="todoInput3" size="50" placeholder="Mother">
+    <input type="submit" value="Add New">
+</form>
+
+<br>
+
+<div ng-repeat="x in todoList">
+    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>, <span ng-bind="x.todoText2"></span>, <span ng-bind="x.todoText3"></span>
+</div>
+
+<p><button ng-click="remove()">Remove marked</button></p>
+
+<script src = "angularQuiz.js"></script>
+
+</body>
+</html>
