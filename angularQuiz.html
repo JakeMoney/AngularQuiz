@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<body ng-app="myApp" ng-controller="todoCtrl">
 
-<h2>My Todo List</h2>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<form ng-submit="todoAdd()">
-    <input type="text" ng-model="todoInput" size="50" placeholder="Person">
-    <input type="text" ng-model="todoInput2" size="50" placeholder="Father">
-    <input type="text" ng-model="todoInput3" size="50" placeholder="Mother">
-    <input type="submit" value="Add New">
-</form>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<br>
+<link href = "angularQuiz.css" rel = "stylesheet">
+<body ng-app="myApp" ng-controller="todoCtrl" id = "background">
+<div id = "container">
+	<div id = "title"><h2>Family Listings</h2></div>
 
-<div ng-repeat="x in todoList">
-    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>, <span ng-bind="x.todoText2"></span>, <span ng-bind="x.todoText3"></span>
+	<form ng-submit="todoAdd()">
+	    <input class = "form-control inputBox" type="text" ng-model="todoInput" size="50" placeholder="Person">
+	    <input class = "form-control inputBox" type="text" ng-model="todoInput2" size="50" placeholder="Father">
+	    <input class = "form-control inputBox" type="text" ng-model="todoInput3" size="50" placeholder="Mother">
+	    <input class = "btn btn-primary buttonBox" type="submit" value="Add New">
+	</form>
+
+	<br>
+
+	<div class = "famInput" ng-repeat="x in todoList">
+	    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>, <span ng-bind="x.todoText2"></span>, <span ng-bind="x.todoText3"></span>
+	</div>
+
+	<p><button class = "btn btn-primary buttonBox" ng-click="remove()">Remove marked</button></p>
 </div>
-
-<p><button ng-click="remove()">Remove marked</button></p>
-
 <script src = "angularQuiz.js"></script>
 
 </body>

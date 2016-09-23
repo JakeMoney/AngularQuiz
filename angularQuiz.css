@@ -1,0 +1,47 @@
+#container
+{
+	background-color: grey;
+	-moz-border-radius-topleft: 30px;
+	-moz-border-radius-topright: 30px;
+	-webkit-border-top-left-radius: 30px;
+	-webkit-border-top-right-radius: 30px;
+	-webkit-border-bottom-right-radius: 30px;
+	-webkit-border-bottom-left-radius: 30px;
+	-moz-border-radius-bottomright: 30px;
+	-moz-border-radius-bottomleft: 30px;
+
+}
+
+#background
+{
+	background-color:black;
+}
+
+#title
+{
+	color:darkblue;
+	margin-left: 710px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.inputBox
+{
+	width: 300px;
+	margin-left: 650px;
+}
+
+.buttonBox
+{
+	width: 150px;
+	margin-left: 730px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.famInput
+{
+	margin-left: 650px;
+	color: lightblue;
+	font-size: 1.2em;
+}
